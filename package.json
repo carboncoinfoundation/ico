@@ -4,6 +4,7 @@
   "description": "Contracts for the NewCarboncoin ICO",
   "main": "truffle.js",
   "scripts": {
+    "dev": "lite-server",
     "test": "truffle test"
   },
   "repository": {
@@ -25,5 +26,8 @@
   "homepage": "https://github.com/carboncoinfoundation/ico#readme",
   "dependencies": {
     "zeppelin-solidity": "^1.3.0"
+  },
+  "devDependencies": {
+    "lite-server": "^2.3.0"
   }
 }
