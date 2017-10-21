@@ -1,16 +1,11 @@
 pragma solidity ^0.4.4;
-import 'zeppelin-solidity/contracts/token/StandardToken.sol';
 
-contract CarboncoinToken is StandardToken {
+import 'zeppelin-solidity/contracts/token/MintableToken.sol';
 
-  string public name = 'CarboncoinToken';
-  string public symbol = 'CCT';
-  uint public decimals = 2;
-  uint public INITIAL_SUPPLY = 160000000;
+contract CarboncoinToken is MintableToken {
 
-  function CarboncoinToken() {
-    totalSupply = INITIAL_SUPPLY;
-    balances[msg.sender] = INITIAL_SUPPLY;
-  }
+  string public name = 'Carboncoin';
+  string public symbol = 'NCC';
+  uint public decimals = 18;
 
 }
