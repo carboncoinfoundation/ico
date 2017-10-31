@@ -1,8 +1,18 @@
-# NewCarboncoin ICO Contracts
+# New Carboncoin ICO
 
-These contracts for the New Carboncoin ICO make use of Truffle and Open Zeppelin.
+Allowing new supporters of Carboncoin to purchase tokens redeemable for coins on the forthcoming Carboncoin network to be built with the funds raised.
 
-## Getting started
+## Technical Instructions
+
+These contracts for the Carboncoin Ethereum Swapout make use of [Truffle](truffleframework.com) and [Open Zeppelin](https://openzeppelin.org/).
+
+### Suggested Tutorials and Reading before contributing
+
+* [Truffle Pet Shop](http://truffleframework.com/tutorials/pet-shop)
+* [Building Robust Smart Contracts with Open Zeppelin](http://truffleframework.com/tutorials/robust-smart-contracts-with-openzeppelin)
+* [Mintable Token Tutorial](https://blog.zeppelin.solutions/how-to-create-token-and-initial-coin-offering-contracts-using-truffle-openzeppelin-1b7a5dae99b6)
+
+### Getting up and running locally
 
 Install Ethereum TestRPC and Truffle:
 
@@ -12,6 +22,14 @@ Install Ethereum TestRPC and Truffle:
 
 Clone this repository and npm install. This will install Open Zeppelin.
 
-## Sources
+### Deploying locally
 
-* [How To Create Token and Initial Coin Offering Contracts Using Truffle + OpenZeppelin](https://blog.zeppelin.solutions/how-to-create-token-and-initial-coin-offering-contracts-using-truffle-openzeppelin-1b7a5dae99b6)
+Run the Ethereum testrpc in a terminal window:
+
+`testrpc`
+
+In a separate window, compile the project and run the migrations, deploying the contract to testrpc:
+
+`truffle compile`
+
+`truffle migrate`
