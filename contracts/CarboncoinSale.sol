@@ -369,8 +369,8 @@ contract MintableToken is StandardToken, Ownable {
 
 contract CarboncoinToken is MintableToken {
 
-  string public name = 'NCC Test';
-  string public symbol = 'NCCT';
+  string public name = 'NCC Test One';
+  string public symbol = 'NCCTONE';
   uint public decimals = 8;
 
 }
