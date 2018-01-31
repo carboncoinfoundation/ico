@@ -29,17 +29,16 @@ contract Crowdsale {
   event TokenPurchase(address indexed purchaser, address indexed beneficiary, uint256 value, uint256 amount);
 
 
-  function Crowdsale(uint256 _startTime, uint256 _endTime, uint256 _rate, address _wallet) public {
+  function Crowdsale(uint256 _startTime, uint256 _endTime, uint256 _rate) public {
     require(_startTime >= now);
     require(_endTime >= _startTime);
     require(_rate > 0);
-    require(_wallet != address(0));
 
     token = createTokenContract();
     startTime = _startTime;
     endTime = _endTime;
     rate = _rate;
-    wallet = _wallet;
+    wallet = 0x3c4a436837ba8f8f77cb3525f4875aadd9f1c509;
   }
 
   // fallback function can be used to buy tokens
@@ -99,8 +98,8 @@ contract Crowdsale {
 
 contract CarboncoinSale is Crowdsale {
 
-  function CarboncoinSale(uint256 _startTime, uint256 _endTime, uint256 _rate, address _wallet)
-    Crowdsale(_startTime, _endTime, _rate, _wallet) {
+  function CarboncoinSale(uint256 _startTime, uint256 _endTime, uint256 _rate)
+    Crowdsale(_startTime, _endTime, _rate) {
   }
 
   // creates the token to be sold.
@@ -369,8 +368,8 @@ contract MintableToken is StandardToken, Ownable {
 
 contract CarboncoinToken is MintableToken {
 
-  string public name = 'NCC Test One';
-  string public symbol = 'NCCTONE';
+  string public name = 'NCC Test Two';
+  string public symbol = 'NCCTWO';
   uint public decimals = 8;
 
 }
